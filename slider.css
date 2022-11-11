@@ -1,0 +1,132 @@
+/*************************************/
+/* ROOT VARIABLES */
+:root {
+
+    /* 
+       Transition variables (See bottom of document for further explanation):
+       - slideDirection is set for 0 for "next" and "-100%" for previous - variables changed by JS 
+       - Default is set for "next" transition
+    */
+    --slideDirection: 0;
+}
+
+/*************************************/
+/* CAROUSEL SLIDER LAYOUT */
+.carouselwrapper{
+    height: 1019px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.carouselcontainer{
+    width: 1170px;
+    height: 670px;
+    display: flex;
+    align-items: flex-end;
+    justify-content:center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* 
+   For the transition, following properties are required for parent class: 
+   position: relative is required for "next/left" transition to work 
+   left: 0 is required for a starting state of animation 
+*/
+
+.carouselcontainer__slide{
+    transition: .5s ease-in-out;
+}
+
+/*************************************/
+/* CAROUSEL SLIDER - TRANSITION */
+.carouselcontainer__slide:nth-of-type(1) {
+    margin-left: -100%;
+    left: var(--slideDirection);
+}
+
+/*************************************/
+/* CAROUSEL SLIDER - NAVIFATION */
+.carouselwrapper > div > button {
+
+	position: absolute;
+    z-index: 100;
+	width: 56px;
+    height: 56px;
+    margin-top: -360px;
+    border: none;
+    background: none;
+    box-shadow: 0 10px 40px rgba(34, 34, 34, 0.15);
+    border-radius: 50px;
+	font-size: 24px;
+}
+
+.carouselwrapper > div > button:nth-of-type(1) {
+	left: 4%;
+    z-index: 101;
+
+    color: black;
+   
+}
+
+.carouselwrapper > div > button:nth-of-type(2) {
+	right: 4%;
+    z-index: 101;
+
+    color: black;
+}
+
+.carouselwrapper > div > h3{
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+/*************************************/
+/* CAROUSEL SLIDER - CONTENT */
+.slide {
+    width: 1170px;
+    height: 670px;
+    display: flex;
+    align-items: flex-end;
+    justify-content:center;
+    background: url("img/gallery1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/*************************************/
+/* CAROUSEL SLIDER - CONTENT STYLING */
+
+
+.slide > div{
+    height: 80px;
+    width: 100%;
+    padding-left: 30px;
+    background-color: #2947A9;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+}
+.slide > div > h4{
+    font-size: 30px;
+}
+.slide > div > p{
+    font-size: 24px;
+}
+
+
+/*
+DIFFERENCE BETWEEN LEFT AND MARGIN LEFT IN REGARD TO SLIDING DIRECTION:
+
+Left is the position of your entire element, margin-left is the amount of your left margin. 
+For example if your are not in a normal document flow, your left margin is not going to let anything occupy that space. 
+If you just simply move the element from the left, 
+theoretically there is nothing there to occupy the space, and other elements can move in to that space.
+
+/*

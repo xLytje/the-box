@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Box</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slider.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/123e803ad1.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="white">&nbsp;</div>
+    <header>
+        <a href="#top"><img src="img/theboxlogo.svg" alt="The Box"></a>
+        <nav>
+            <a href="#top">home</a>
+            <a href="#about">about us</a>
+            <a href="#projects">projects</a>
+            <a href="#contact" class="contact">contact us</a>
+        </nav>
+    </header>
+    <div class="hero" id="top">
+        <h1>Building things<br>is our mission.</h1>
+    </div>
+    <section class="gfu">
+        <h2>Our Reputation</h2>
+            <div class="infos">
+            <div class="infobox">
+                <img src="img/headphoneicon.svg" alt="">
+                <h3>Best Services</h3>
+                <p>Nullam senectus porttitor eget. Eget rutrum leo interdum.</p>
+            </div>
+            <div class="infobox">
+                <img src="img/headphoneicon.svg" alt="">
+                <h3>Best Teams</h3>
+                <p>Cursus semper tellus volutpat aliquet lacus. </p>
+            </div>
+            <div class="infobox">
+                <img src="img/pencilrulericon.svg" alt="">
+                <h3>Best Designs</h3>
+                <p>Ultricies at ipsum nunc, tristique nam lectus.</p>
+            </div>
+        </div>
+    </section>
+    <div class="about" id="about">
+        <img src="img/founder.jpg" alt="Founder of The Box">
+        <aside>
+            <h3>About us</h3>
+            <p>For more than 30 years we have been delivering world-class construction and we've built many lasting relationships along the way.<br><br>We've matured into an industry leader and trusted resource for those seeking quality, innovation and reliability when building in the U.S.</p>
+            <button>More on Our History</button>
+        </aside>
+    </div>
+    <div class="cta">
+        <div>
+            <h3>Free consultation with exceptional quality</h3>
+            <p>Just one call away: <a href="tel:+8411022703">+84 1102 2703</a></p>
+        </div>
+        <button>Get your consultation</button>
+    </div>
+    <!-- STUPIDASS SLIDER LOOKINASS-->
+    <section class="carouselwrapper">
+        <div>
+            <h3>Projects</h3>
+            <section class="carouselcontainer"></section>
+            <button class="prev"><i class="fa fa-angle-left"></i></button>
+            <button class="next"><i class="fa fa-angle-right"></i></button>
+        </div>
+	</section>
+    <div class="form-element" id="contact">
+        <div>
+            <h3>How can we help you?</h3>
+            <p>We are ready to work on a project of any complexity,<br>whether it's commercial or residential.</p>
+            <form action="javascript:void(0);">
+                <input type="text" name="name" id="name" placeholder="Your Name">
+                <input type="text" name="mail" id="mail" placeholder="Your Email">
+                <textarea name="message" id="message"  placeholder="Message" cols="30" rows="10"></textarea>
+                <button id="submitbtn">Submit</button>
+                <span id="output1"></span>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="f-left">
+            <table>
+                <tr>
+                    <th><span>Address:</span></th>
+                    <th>6391 Elgin St. Celina, Delaware 10299</th>
+                </tr>
+                <tr>
+                    <th><span>Phone:</span></th>
+                    <th>+84 1102 2703</th>
+                </tr>
+                <tr>
+                    <th><span>Email:</span></th>
+                    <th>hello@thebox.com</th>
+                </tr>
+            </table>
+            <img src="img/theboxlogo.svg" alt="">
+        </div>
+        <div class="f-right">
+            <p>newsletter:</p>
+            <span id="output2"></span>
+            <div>
+                <input type="text" name="mail" id="mail" placeholder="Your email here">
+                <button id="subscribebtn">Subscribe</button>
+            </div>
+            <p>social:</p>
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright">
+        <p>TheBox Company © 2022. All Rights Reserved</p>
+    </div>
+</body>
+</html>
