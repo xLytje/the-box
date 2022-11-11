@@ -51,7 +51,7 @@
 /*************************************/
 /* CAROUSEL SLIDER - NAVIFATION */
 .carouselwrapper > div > button {
-
+    cursor: pointer;
 	position: absolute;
     z-index: 1;
 	width: 56px;
